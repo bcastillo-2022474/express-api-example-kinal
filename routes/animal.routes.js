@@ -20,6 +20,7 @@ route.route('/')
         check("especie", "La especie no puede estar vacia").not().isEmpty(),
         check("peso", "El peso debe ser un numero").isNumeric(),
         check("altura", "La altura debe ser un numero").isNumeric(),
+        validarCampos
     ], postAnimal)
 
 route.route("/:id")
@@ -45,6 +46,7 @@ route.route("/:id")
             const animal = await Animal.findById(id)
             if (!animal) throw new Error("No existe ningun animal con ese ID");
         }),
+        validarCampos
     ], deleteAnimalById)
 
 module.exports = route

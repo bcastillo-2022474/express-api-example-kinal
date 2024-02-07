@@ -1,0 +1,100 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "API Animales",
+    "dateExported": "2024-02-07T21:56:46.293Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0a470e5c-167f-458d-b8ef-09cfe2871a91",
+            "colId": "7c359553-b882-46ba-82bc-d520d0598bfd",
+            "containerId": "",
+            "name": "get all Animals",
+            "url": "localhost:3000/api/animales?limite=10&desde=33",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-07T20:48:58.621Z",
+            "modified": "2024-02-07T21:50:05.372Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limite",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "desde",
+                    "value": "33",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "fc37dd6d-1f79-45a9-8b4e-3e7b989a5d23",
+            "colId": "7c359553-b882-46ba-82bc-d520d0598bfd",
+            "containerId": "",
+            "name": "get Animal by ID",
+            "url": "localhost:3000/api/animales/65c3f7d40149fdba19382365",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-07T20:49:32.213Z",
+            "modified": "2024-02-07T21:41:23.049Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f954c9e0-e9e1-4288-982f-679c68f8f93f",
+            "colId": "7c359553-b882-46ba-82bc-d520d0598bfd",
+            "containerId": "",
+            "name": "create Animal",
+            "url": "localhost:3000/api/animales",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-07T20:49:50.600Z",
+            "modified": "2024-02-07T21:38:26.246Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Gato\",\n  \"especie\": \"random Gato\",\n  \"expectativa_de_vida\": 42,\n  \"peso\": 22,\n  \"altura\": 22\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e624bb2a-859d-4714-a1af-a9a9bf9ebcc1",
+            "colId": "7c359553-b882-46ba-82bc-d520d0598bfd",
+            "containerId": "",
+            "name": "update Animal by ID",
+            "url": "localhost:3000/api/animales/65c3f7d40149fdba19382365",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-07T21:38:40.015Z",
+            "modified": "2024-02-07T21:50:24.157Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Jirafa\",\n  \"especie\": \"random Jirafa\",\n  \"expectativa_de_vida\": 44,\n  \"peso\": 44,\n  \"altura\": 29\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dc45227c-3eeb-4941-a841-6defc5d96f83",
+            "colId": "7c359553-b882-46ba-82bc-d520d0598bfd",
+            "containerId": "",
+            "name": "delete Animal by ID",
+            "url": "localhost:3000/api/animales/65c3f7d40149fdba19382365",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-07T21:39:08.023Z",
+            "modified": "2024-02-07T21:50:31.717Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
