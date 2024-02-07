@@ -1,4 +1,4 @@
-const {Animal} = require("../models/animal")
+const Animal = require("../models/animal")
 const {Router} = require('express');
 const {check} = require("express-validator");
 const {validarCampos} = require("../middlewares/validar-campos");

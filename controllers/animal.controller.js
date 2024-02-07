@@ -1,9 +1,12 @@
+const Animal = require("../models/animal");
+
 const getAnimals = async (req, res) => {
     const {desde = 0, limite = 5} = req.query
     const filter = {tp_estado: true}
-    const animals = await Promise.all([Animal.countDocuments(filter), Animal.find(filter).skip(desde).limit(limite)])
+    console.log(Animal)
+    const [total, animals] = await Promise.all([Animal.countDocuments(filter), Animal.find(filter).skip(desde).limit(limite)])
 
-    res.status(200).json({total, animals})
+    res.status(200).json({total, desde, limite, animals})
 }
 
 const postAnimal = async (req, res) => {
@@ -27,7 +30,7 @@ const postAnimal = async (req, res) => {
 
 const getAnimalById = async (req, res) => {
     const {id} = req.params;
-
+    console.log({id})
     const animal = await Animal.findById(id);
     res.status(200).json(animal)
 }
