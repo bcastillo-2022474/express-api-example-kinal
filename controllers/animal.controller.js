@@ -45,10 +45,10 @@ const putAnimalById = async (req, res) => {
         altura
     } = req.body;
 
-    const animal = await Animal.findByIdAndUpdate(id, {nombre, especie, expectativa_de_vida, peso, altura});
-
+    const animalOld = await Animal.findByIdAndUpdate(id, {nombre, especie, expectativa_de_vida, peso, altura})
+    const animalNew = await Animal.findById(id);
     res.status(200).json({
-        msg: "Se ha actualizado correctamente", animal
+        msg: "Se ha actualizado correctamente", old: animalOld, new: animalNew
     })
 }
 
